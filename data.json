@@ -1,0 +1,267 @@
+{
+  "itinerari": [
+    {
+      "id": "mark_twain_roma",
+      "nome": "Gli Innocenti a Roma",
+      "sottotitolo": "Il viaggio satirico di Mark Twain",
+      "personaggio": {
+        "nome": "Mark Twain",
+        "anni": "1835-1910",
+        "professione": "Scrittore e Umorista",
+        "nazionalita": "Statunitense",
+        "biografia_breve": "Samuel Langhorne Clemens, noto come Mark Twain, visitò Roma nel 1867. Nel suo libro 'Gli innocenti all'estero', demolì l'idealizzazione romantica dell'Europa con sarcasmo pungente, trovando l'antica Roma magnifica ma la Roma moderna piena di contraddizioni.",
+        "immagine": "https://upload.wikimedia.org/wikipedia/commons/2/25/Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg",
+        "opere_correlate": [
+          "Gli innocenti all'estero (1869)"
+        ]
+      },
+      "tema": "Letteratura di Viaggio - Satira",
+      "categoria": "Arte e Cultura",
+      "durata_totale_ore": "9 ore e 30 minuti",
+      "difficolta": "media",
+      "immagine_copertina": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Castel_Sant%27_Angelo_Between_Leaves.jpg/960px-Castel_Sant%27_Angelo_Between_Leaves.jpg",
+      "distanza_totale_km": 5.0,
+      "periodo_consigliato": "Autunno/Inverno (atmosfera gotica)",
+      "stagione_migliore": ["ottobre", "novembre", "dicembre", "gennaio"],
+      "descrizione": "Un percorso dissacrante e affascinante attraverso la Roma vista dagli occhi spietati e umoristici di Mark Twain. Dalla grandiosità di San Pietro alle macabre riflessioni nella Cripta dei Cappuccini, un viaggio tra marmo scintillante e ombre secolari.",
+      "note_logistiche": "Indossare abiti adeguati per i luoghi sacri (spalle e ginocchia coperte). La Cripta dei Cappuccini richiede un biglietto di ingresso e non ammette fotografie.",
+      "accessibilita": "Il percorso è prevalentemente pianeggiante e servito da mezzi pubblici. Attenzione ai sampietrini nel centro storico.",
+      "costo_stimato": "Circa €15 (Ingressi Colosseo e Cripta dei Cappuccini variano, il resto è gratuito o visibile dall'esterno)",
+      "tappe": [
+        {
+          "numero": 1,
+          "poi_id": "san_pietro",
+          "orario_consigliato": "09:00",
+          "momento_giornata": "mattino",
+          "durata_visita_min": 90,
+          "coordinate": [41.9022, 12.4539],
+          "nome": "Basilica di San Pietro",
+          "immagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg/330px-Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg",
+          "descrizione_breve": "L'immenso tempio della cristianità che stupì Twain per le sue dimensioni incomprensibili.",
+          "indicazioni_arrivo": "Metro A fermata Ottaviano. Camminare per 10 minuti lungo Via Ottaviano fino a Piazza San Pietro.",
+          "esperienza_culturale": {
+            "letteratura": {
+              "citazione": "Di tutte le cose che ho visto finora in Europa, la Basilica di San Pietro è quella che sembra più incomprensibilmente immensa... Fa sembrare piccole le cose grandi.",
+              "autore": "Mark Twain",
+              "opera": "Gli innocenti all'estero",
+              "anno": 1869,
+              "contesto": "Twain fatica a comprendere le proporzioni della Basilica, notando come statue che sembrano di dimensioni normali siano in realtà gigantesche."
+            },
+            "atmosfera": {
+              "momento": "mattino",
+              "luce": "brillante sul travertino e sui marmi",
+              "suoni_ambiente": ["voci riecheggianti", "campane solenni", "passi sulla pietra lucida"],
+              "temperatura_stimata": "Fresco all'interno",
+              "affollamento": "Alto",
+              "emozione_target": "Stupore, smarrimento prospettico, maestosità"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Rinascimento e Barocco",
+              "architetti": ["Bramante", "Michelangelo", "Bernini"],
+              "descrizione": "Il tripudio dell'oro, del porpora e del marmo policromo che travolse i sensi del viaggiatore americano."
+            },
+            "musica": {
+              "movimento": "\"Miserere\" di Gregorio Allegri",
+              "descrizione_musicale": "Il Miserere è il culmine della tradizione polifonica vaticana. Un canto corale a cappella di straordinaria intensità che incarna la \"sacralità opprimente\" e la perfezione tecnica che Twain ammirava e temeva allo stesso tempo, rappresentando la grandezza ultraterrena e le dimensioni incomprensibili della Basilica (Capitolo 26 dell'opera 'The Innocents Abroad', scritta durante la sua visita a Roma)."
+            }
+          },
+          "storia": "La Basilica papale maggiore sorge, secondo la tradizione, sul luogo di sepoltura dell'apostolo Pietro. La sua costruzione ha richiesto oltre un secolo e il genio dei più grandi artisti dell'epoca.",
+          "curiosita": "Twain rimase colpito dai 'putti' dell'acquasantiera, che da lontano sembravano normali angioletti, ma da vicino si rivelavano sculture colossali.",
+          "metadata": {
+            "accessibilita": "Gratuito l'accesso alla Basilica, controlli di sicurezza all'ingresso",
+            "servizi": ["Toilette", "Audio guide"]
+          }
+        },
+        {
+          "numero": 2,
+          "poi_id": "lungotevere_castello",
+          "orario_consigliato": "11:30",
+          "momento_giornata": "mezzogiorno",
+          "durata_visita_min": 45,
+          "coordinate": [41.9028, 12.4663],
+          "nome": "Lungotevere Castello",
+          "immagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Castel_Sant%27_Angelo_Between_Leaves.jpg/330px-Castel_Sant%27_Angelo_Between_Leaves.jpg",
+          "descrizione_breve": "La passeggiata sul biondo Tevere all'ombra della mole cilindrica di Castel Sant'Angelo.",
+          "indicazioni_arrivo": "A piedi da San Pietro lungo Via della Conciliazione, circa 15 minuti.",
+          "esperienza_culturale": {
+            "letteratura": {
+              "citazione": "Questo vecchio e venerabile castello ha visto così tanto sangue, tante congiure e tanto dolore che sembra trasudare storia dalle sue stesse pietre.",
+              "autore": "Mark Twain",
+              "opera": "Appunti di viaggio",
+              "anno": 1867,
+              "contesto": "La vista del Mausoleo di Adriano stimola la riflessione sulla caducità degli imperi e sulla violenza della storia romana."
+            },
+            "atmosfera": {
+              "momento": "mezzogiorno",
+              "luce": "Piena luce solare che riflette sull'acqua del fiume",
+              "suoni_ambiente": ["scorrere del Tevere", "gabbiani", "traffico in lontananza"],
+              "temperatura_stimata": "Mite",
+              "affollamento": "Moderato",
+              "emozione_target": "Riflessione storica, distacco ironico"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Architettura romana e rinascimentale",
+              "descrizione": "Dal Mausoleo imperiale alla fortezza papale, un monumento stratificato e grigio che sfida il tempo."
+            },
+            "musica": {
+              "movimento": "\"E lucevan le stelle\" (Tosca, Atto III) di G. Puccini",
+              "descrizione_musicale": "Sebbene l'opera sia successiva al viaggio di Twain, questa struggente aria di Cavaradossi (eseguita da Plácido Domingo) è ambientata proprio all'alba sugli spalti di Castel Sant'Angelo. Cattura perfettamente quel romanticismo malinconico e drammatico che lo scrittore percepiva osservando i monumenti trasformati in prigioni e fortezze nel corso dei secoli."
+            }
+          },
+          "storia": "Costruito come sepolcro per l'imperatore Adriano, Castel Sant'Angelo divenne nei secoli fortezza, prigione, e residenza dei Papi nei periodi turbolenti.",
+          "curiosita": "L'angelo in cima al castello, che dà il nome alla struttura, ricorda la visione di Papa Gregorio Magno che segnò la fine della peste.",
+          "metadata": {
+            "accessibilita": "Passeggiata esterna gratuita. Ingresso al castello a pagamento.",
+            "servizi": ["Panchine", "Venditori ambulanti"]
+          }
+        },
+        {
+          "numero": 3,
+          "poi_id": "pantheon",
+          "orario_consigliato": "14:00",
+          "momento_giornata": "pomeriggio",
+          "durata_visita_min": 60,
+          "coordinate": [41.8986, 12.4769],
+          "nome": "Il Pantheon",
+          "immagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pantheon_%28Rome%29_-_Right_side_and_front.jpg/330px-Pantheon_%28Rome%29_-_Right_side_and_front.jpg",
+          "descrizione_breve": "L'unico edificio romano rimasto perfettamente intatto, che Twain preferì alle rovine sbriciolate.",
+          "indicazioni_arrivo": "Passeggiata attraversando il centro storico via Corso Vittorio Emanuele II, circa 20 minuti.",
+          "esperienza_culturale": {
+            "letteratura": {
+              "citazione": "Amo il Pantheon perché è l'unico pezzo di antichità qui a Roma che ha ancora un tetto... e non hai bisogno di ricostruirlo con l'immaginazione.",
+              "autore": "Mark Twain",
+              "opera": "Gli innocenti all'estero",
+              "anno": 1869,
+              "contesto": "La pragmatica visione americana di Twain lo porta a disprezzare le rovine frammentarie e ad esaltare l'integrità formidabile del Pantheon."
+            },
+            "atmosfera": {
+              "momento": "pomeriggio",
+              "luce": "Un raggio di luce divina che entra dall'Oculus e taglia l'oscurità",
+              "suoni_ambiente": ["mormorio sommesso", "eco sotto la cupola"],
+              "temperatura_stimata": "Mite",
+              "affollamento": "Molto alto",
+              "emozione_target": "Rispetto reverenziale, concretezza"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Architettura romana antica",
+              "descrizione": "Una sfera perfetta inscritta in un cilindro, con un oculus centrale che collega la terra al cielo."
+            },
+            "musica": {
+              "movimento": "\"Veni Creator Spiritus\" (Canto Gregoriano)",
+              "descrizione_musicale": "Il Pantheon è un tempio pagano convertito in chiesa. Questo canto gregoriano spoglio e privo di strumenti riflette perfettamente l'integrità architettonica, la \"nuda maestà\" e la purezza monolitica che Twain lodò nel capitolo 25 dell'opera 'The Innocents Abroad' (scritta durante la sua visita a Roma), definendolo un'opera \"perfetta\"."
+            }
+          },
+          "storia": "Costruito da Agrippa e ricostruito da Adriano, è il tempio dedicato a tutti gli dei, poi convertito in basilica cristiana. Conserva le tombe di Raffaello e dei Re d'Italia.",
+          "curiosita": "L'Oculus di 9 metri è l'unica fonte di luce naturale, ed essendo aperto fa entrare la pioggia, che defluisce in buchi nascosti nel pavimento.",
+          "metadata": {
+            "accessibilita": "Ingresso a pagamento, prenotazione spesso necessaria nei weekend.",
+            "servizi": ["Piazza affollata con caffè"]
+          }
+        },
+        {
+          "numero": 4,
+          "poi_id": "colosseo",
+          "orario_consigliato": "16:30",
+          "momento_giornata": "tramonto",
+          "durata_visita_min": 90,
+          "coordinate": [41.8902, 12.4922],
+          "nome": "Il Colosseo",
+          "immagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/330px-Colosseo_2020.jpg",
+          "descrizione_breve": "L'anfiteatro dei gladiatori, che Twain visita di notte per fuggire dalle guide turistiche.",
+          "indicazioni_arrivo": "A piedi passando per Via dei Fori Imperiali, una passeggiata scenografica di circa 25 minuti.",
+          "esperienza_culturale": {
+            "letteratura": {
+              "citazione": "Siamo andati al Colosseo di notte per cercare di capirne la grandezza senza l'incessante cicaleggio delle guide turistiche, che rovinerebbero persino l'apocalisse.",
+              "autore": "Mark Twain",
+              "opera": "Gli innocenti all'estero",
+              "anno": 1869,
+              "contesto": "Twain critica ferocemente le guide e l'industria turistica nascente, preferendo la contemplazione solitaria e notturna delle rovine."
+            },
+            "atmosfera": {
+              "momento": "tramonto",
+              "luce": "Raggi dorati che penetrano le arcate sbrecciate, seguiti dal crepuscolo",
+              "suoni_ambiente": ["traffico romano", "passi sul pietrisco", "silenzio tra le rovine"],
+              "temperatura_stimata": "Fresco all'esterno",
+              "affollamento": "Alto",
+              "emozione_target": "Decadenza, fascino romantico, cinismo"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Architettura romana antica",
+              "descrizione": "Il colossale anfiteatro Flavio, scheletro di travertino della Roma imperiale."
+            },
+            "musica": {
+              "movimento": "\"Tell Me the Old, Old Story\" di Kate Hankey, 1866",
+              "descrizione_musicale": "Un pezzo evocativo per la passeggiata solitaria tra le rovine. Nel libro Twain cita spesso in modo satirico gli inni religiosi americani (\"The Old, Old Story\"). Questo inno dell'epoca si sposa bene con il suo tono sarcastico verso la retorica sui martiri cristiani che le pressanti guide turistiche propinavano senza sosta."
+            }
+          },
+          "storia": "Inaugurato nell'80 d.C., era il palcoscenico dei sanguinosi giochi gladiatori, capace di ospitare fino a 80.000 spettatori.",
+          "curiosita": "Per Twain, le vere 'bestie' del Colosseo non erano i leoni dell'antichità, ma le insistenti guide turistiche che assillavano gli americani.",
+          "metadata": {
+            "accessibilita": "Biglietto necessario, si consiglia la prenotazione online.",
+            "servizi": ["Metro B (Colosseo)", "Audioguide"]
+          }
+        },
+        {
+          "numero": 5,
+          "poi_id": "cripta_cappuccini",
+          "orario_consigliato": "18:30",
+          "momento_giornata": "sera",
+          "durata_visita_min": 45,
+          "coordinate": [41.9048, 12.4883],
+          "nome": "Cripta dei Cappuccini",
+          "immagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rom%2C_Santa_Maria_Immacolata_a_Via_Veneto%2C_Krypta_der_Kapuziner_1.jpg/330px-Rom%2C_Santa_Maria_Immacolata_a_Via_Veneto%2C_Krypta_der_Kapuziner_1.jpg",
+          "descrizione_breve": "Il macabro e affascinante ossario decorato con le ossa di 4000 frati.",
+          "indicazioni_arrivo": "Metro B da Colosseo a Termini, cambio con Metro A fino a Barberini. Poi pochi minuti a piedi su Via Veneto.",
+          "esperienza_culturale": {
+            "letteratura": {
+              "citazione": "In questa cripta giacciono le ossa di 4000 monaci. È un'esposizione talmente macabra e artistica da farti venire i brividi. Il monaco che ci fa da guida sembra invidiare coloro i cui teschi sono diventati lampadari.",
+              "autore": "Mark Twain",
+              "opera": "Gli innocenti all'estero",
+              "anno": 1869,
+              "contesto": "L'incontro di Twain con la cripta è una miscela di orrore gotico, umorismo nero e profonda fascinazione per la mortalità."
+            },
+            "atmosfera": {
+              "momento": "sera",
+              "luce": "Fioca, ombre tremolanti e oscurità opprimente",
+              "suoni_ambiente": ["sussurri riverenti", "passi attutiti", "silenzio sepolcrale"],
+              "temperatura_stimata": "Freddo umido",
+              "affollamento": "Basso",
+              "emozione_target": "Macabro, riflessione sulla mortalità, umorismo nero"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Arte macabra / Barocco cimiteriale",
+              "descrizione": "Sei piccole stanze sotterranee decorate interamente con ossa umane disposte in motivi intricati, rosoni e orologi."
+            },
+            "musica": {
+              "movimento": "\"Danse Macabre\" di Camille Saint-Saëns",
+              "descrizione_musicale": "Composta nel 1874, questa danza evoca esattamente l'ironia grottesca di Twain. Il ritmo scatenato della Morte che suona il violino non è un brano funebre triste, ma una bizzarra celebrazione, perfetta per accompagnare il passaggio in cui l'autore scherza sulla macabra \"vanità\" delle ossa messe in posa."
+            }
+          },
+          "storia": "I frati cappuccini usarono le ossa dei loro confratelli defunti per decorare la cripta, con l'intento di ricordare la caducità della vita umana ('Quello che voi siete noi eravamo, quello che noi siamo voi sarete').",
+          "curiosita": "Twain rimase sbalordito dalla tranquillità con cui il frate guida mostrava le decorazioni fatte con i resti dei suoi 'amici'.",
+          "metadata": {
+            "accessibilita": "Ingresso a pagamento, fotografie severamente vietate, silenzio richiesto.",
+            "servizi": ["Bookshop", "Museo dei Cappuccini"]
+          }
+        }
+      ],
+      "mappa_percorso": {
+        "colore_percorso": "#d4af37",
+        "stile_linea": "solid"
+      },
+      "consigli_pratici": [
+        "Portare abbigliamento consono per entrare in Basilica e Cripta",
+        "Evitare di affidarsi ciecamente alle guide turistiche non autorizzate (come raccomandato da Twain!)",
+        "Prepararsi a lunghe camminate sui sampietrini",
+        "Apprezzare l'umorismo nero e l'ironia davanti alla solennità romana"
+      ],
+      "migliore_periodo_anno": "Le giornate autunnali grigie rendono perfette le visite alla Cripta e al Pantheon.",
+      "sconsigliato": ["Mesi estivi (troppi turisti, che Twain detestava)"],
+      "cosa_portare": [
+        "Una copia de 'Gli innocenti all'estero'",
+        "Macchina fotografica (non per la Cripta)",
+        "Senso dell'umorismo e spirito critico"
+      ]
+    }
+  ]
+}
