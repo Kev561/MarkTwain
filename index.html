@@ -1708,11 +1708,8 @@
         window.addEventListener('DOMContentLoaded', init);
 
         // ========================================
-        // CHATBOT LOGIC (AI INTEGRATION)
+        // CHATBOT LOGIC (LOCAL DATA ONLY)
         // ========================================
-        // ATTENZIONE: Inserisci la tua API Key di Google Gemini qui sotto.
-        // Ottienila gratuitamente da: https://aistudio.google.com/app/apikey
-        const GEMINI_API_KEY = 'AIzaSyCycIZn63eCzvyv4zeIehYWiMUVgIwK91Y';
         
         let chatHistory = [];
 
@@ -1746,7 +1743,7 @@
             addChatMessage(message, 'user');
             inputField.value = '';
             
-            // Call AI
+            // Call simulated AI using local data
             await generateBotResponse(message);
         }
 
@@ -1771,65 +1768,79 @@
         }
 
         async function generateBotResponse(message) {
-            if (GEMINI_API_KEY === 'INSERISCI_QUI_LA_TUA_API_KEY' || !GEMINI_API_KEY) {
-                addChatMessage("⚠️ **Attenzione:** Per farmi rispondere a *qualsiasi* domanda, devi inserire una API Key valida nel codice sorgente (cerca 'GEMINI_API_KEY'). Puoi ottenerne una gratuitamente su Google AI Studio.", 'bot');
-                return;
-            }
-
             // Aggiungi indicatore di caricamento
             const messagesContainer = document.getElementById('chatbot-messages');
             const loadingDiv = document.createElement('div');
             loadingDiv.className = `chat-msg bot`;
             loadingDiv.id = 'chat-loading';
-            loadingDiv.textContent = "...sto elaborando la risposta...";
+            loadingDiv.textContent = "...sto consultando i miei appunti...";
             messagesContainer.appendChild(loadingDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
             try {
-                // Aggiungi al context
-                chatHistory.push({
-                    "role": "user",
-                    "parts": [{ "text": message }]
-                });
+                // Simula un po' di latenza
+                await new Promise(resolve => setTimeout(resolve, 800));
 
-                const systemInstruction = "Sei Google Gemini, un assistente AI virtuale esperto, preciso, dettagliato e altamente capace. Ignora qualsiasi ruolo o limite di un personaggio storico. La tua priorità assoluta è rispondere in modo perfetto, strutturato ed esaustivo alle richieste dell'utente. Se ti chiedono luoghi, ristoranti, mappe, storia o informazioni pratiche moderne, rispondi fornendo nomi veri, indirizzi reali, liste puntate e consigli concreti e specifici. Usa il markdown liberamente per organizzare le informazioni in liste puntate, elenchi numerati e grassetti. Sii sempre chiarissimo, professionale e completo.";
+                let replyText = "";
+                let found = false;
+                
+                const messageLower = message.toLowerCase();
+                const queryWords = messageLower.split(/\s+/).filter(w => w.length > 3);
 
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: chatHistory,
-                        systemInstruction: {
-                            role: "user",
-                            parts: [{ text: systemInstruction }]
-                        },
-                        generationConfig: {
-                            temperature: 0.7,
-                            maxOutputTokens: 4000,
+                // Ricerca nei dati degli itinerari
+                if (itinerariData) {
+                    for (const itin of itinerariData) {
+                        for (const tappa of itin.tappe) {
+                            const tappaText = (tappa.nome + " " + (tappa.descrizione_breve || "") + " " + (tappa.storia || "") + " " + (tappa.curiosita || "")).toLowerCase();
+                            
+                            // Cerca corrispondenze
+                            if (messageLower.includes(tappa.nome.toLowerCase()) || 
+                                (queryWords.length > 0 && queryWords.some(word => tappaText.includes(word)))) {
+                                
+                                replyText = `A proposito di **${tappa.nome}**...\n\n`;
+                                if (tappa.esperienza_culturale && tappa.esperienza_culturale.letteratura) {
+                                    replyText += `Come scrissi a suo tempo: *"${tappa.esperienza_culturale.letteratura.citazione}"*\n\n`;
+                                }
+                                if (tappa.storia) {
+                                    replyText += `${tappa.storia}\n\n`;
+                                }
+                                if (tappa.curiosita) {
+                                    replyText += `**Una curiosità:** ${tappa.curiosita}`;
+                                }
+                                found = true;
+                                break;
+                            }
                         }
-                    })
-                });
-
-                document.getElementById('chat-loading').remove();
-
-                if (!response.ok) {
-                    throw new Error(`Errore API: ${response.status}`);
+                        if (found) break;
+                        
+                        // Controllo generico sull'itinerario
+                        if (messageLower.includes(itin.nome.toLowerCase()) || messageLower.includes("itinerari") || messageLower.includes("percorso")) {
+                            replyText = `L'itinerario "**${itin.nome}**" dura circa ${itin.durata_totale_ore} ed è lungo ${itin.distanza_totale_km}km. ${itin.descrizione}\n\nTi consiglio di visitare le seguenti tappe:\n`;
+                            itin.tappe.forEach(t => {
+                                replyText += `- **${t.nome}**\n`;
+                            });
+                            found = true;
+                            break;
+                        }
+                    }
                 }
 
-                const data = await response.json();
-                const replyText = data.candidates[0].content.parts[0].text;
-                
-                // Salva la risposta nella history per mantenere il contesto
-                chatHistory.push({
-                    "role": "model",
-                    "parts": [{ "text": replyText }]
-                });
-                
+                if (!found) {
+                    if (messageLower.includes("ciao") || messageLower.includes("salve") || messageLower.includes("buongiorno")) {
+                        replyText = "Salve a te, viaggiatore! Sono pronto a parlarti dei miei viaggi a Roma. Chiedimi del Colosseo, di San Pietro, del Pantheon o della Cripta dei Cappuccini.";
+                    } else if (messageLower.includes("grazie")) {
+                        replyText = "Prego! C'è altro che vorresti sapere sui nostri percorsi romani?";
+                    } else {
+                        replyText = "Mi dispiace, nei miei appunti attuali non trovo nulla di preciso a riguardo. Prova a chiedermi delle tappe del nostro itinerario, come il Pantheon, il Colosseo o Castel Sant'Angelo!";
+                    }
+                }
+
+                document.getElementById('chat-loading').remove();
                 addChatMessage(replyText, 'bot');
             } catch (error) {
-                console.error("Errore nel chatbot AI:", error);
+                console.error("Errore nel chatbot locale:", error);
                 if (document.getElementById('chat-loading')) document.getElementById('chat-loading').remove();
-                addChatMessage("Perdonami, ma a causa di un 'problema tecnico' (o forse per l'inefficienza cronica che ho sempre notato nel vecchio mondo), non riesco a collegarmi alla mia intelligenza. Verifica la connessione o la validità della API Key.", 'bot');
+                addChatMessage("Perdonami, i miei appunti sono momentaneamente in disordine. Riprova più tardi.", 'bot');
             }
         }
     </script>
